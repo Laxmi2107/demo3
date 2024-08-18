@@ -1,0 +1,21 @@
+name: Java Program
+
+on: [ push, pull_request]
+env: openjdk:24-slim-bullseye
+jobs:
+   job1:
+     runs-on: ubuntu-latest
+  
+     steps:
+     - uses: actions/checkout@v4
+     - name: Set up JDK 17
+       uses: actions/setup-java@v4
+       with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+     - name: Download artifact
+       uses: actions/download-artifact@v4
+     - name: java compile
+         javac Hello.java
+
