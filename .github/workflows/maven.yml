@@ -16,6 +16,6 @@ jobs:
      - name: Download artifact
        uses: actions/download-artifact@v4
      - name: java compile
-         javac Hello.java
-         java hello
+       run: javac Hello.java
+            java hello
 
