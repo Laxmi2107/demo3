@@ -1,7 +1,6 @@
 name: Java Program
 
 on: [ push, pull_request]
-env: openjdk:24-slim-bullseye
 jobs:
    job1:
      runs-on: ubuntu-latest
@@ -18,4 +17,5 @@ jobs:
        uses: actions/download-artifact@v4
      - name: java compile
          javac Hello.java
+         java hello
 
