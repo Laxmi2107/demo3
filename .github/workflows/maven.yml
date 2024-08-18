@@ -26,18 +26,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Download Class File
         uses: actions/download-artifact@v3
-           with:
+        with:
               name: Hello-class
       - name: Run Java Program
         run: java hello
   
-  job3:
+ job3:
     runs-on: ubuntu-latest
     steps:
      - name: Download Class File
        env:
         MY_VAR: "MY Variable"
-       run : echo $MY_VAR 
+       run: echo $MY_VAR 
       
      
     
